@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Contador - Juan</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <div class="caja-principal">
+
+    <div class="encabezado-principal">
+      <div>
+        <strong>Juan</strong><br>
+        <a class="cambiar" href="#" onclick="irAIndex()">Cambiar perfil</a>
+      </div>
+    </div>
+
+    <button class="boton" type="button">+ Agregar Movimiento</button> 
+
+
+    <div class="tarjeta">
+            <!-- Contenedor Principal de la Gráfica -->
+<div class="contenedor-grafica">
+  
+
+  <!-- Área de dibujo SVG donde se trazan las líneas vectoriales -->
+  <div class="area-grafica">
+    <svg viewBox="0 0 400 200" width="100%" height="200">
+      
+      <!-- Línea Verde (Ingresos) - Coordenadas X,Y -->
+      <polyline class="linea-ingresos" points="20,140 140,40 260,110 380,20" />
+      
+      <!-- Línea Roja (Egresos) - Coordenadas X,Y -->
+      <polyline class="linea-egresos" points="20,60 140,120 260,70 380,160" />
+
+      <!-- Puntos de la línea verde -->
+      <circle class="punto-verde" cx="20" cy="140" r="5" />
+      <circle class="punto-verde" cx="140" cy="40" r="5" />
+      <circle class="punto-verde" cx="260" cy="110" r="5" />
+      <circle class="punto-verde" cx="380" cy="20" r="5" />
+
+      <!-- Puntos de la línea roja -->
+      <circle class="punto-rojo" cx="20" cy="60" r="5" />
+      <circle class="punto-rojo" cx="140" cy="120" r="5" />
+      <circle class="punto-rojo" cx="260" cy="70" r="5" />
+      <circle class="punto-rojo" cx="380" cy="160" r="5" />
+
+    </svg>
+  </div>
+
+  <!-- Texto inferior con los meses -->
+  <div class="eje-x">
+    <span>Ene</span>
+    <span>Feb</span>
+    <span>Mar</span>
+    <span>Abr</span>
+  </div>
+<!-- Texto que explica los colores -->
+  <div class="leyenda">
+    <div class="item-leyenda"><span class="color-verde">▬</span> Ingresos</div>
+    <div class="item-leyenda"><span class="color-rojo">▬</span> Egresos</div>
+  </div>
+</div>
+
+      <p>Saldo total</p>
+      <p class="saldo">$24,562.00</p>
+      <p class="positivo">+2.4% desde el mes pasado</p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Transacciones recientes</h3>
+      <ul class="lista-transacciones">
+        <li>
+          <div class="tx-detalle">
+            <p class="tx-titulo">Whole Foods Market</p>
+            <p class="tx-categoria">Comestibles - Hoy</p>
+          </div>
+          <p class="negativo">-$142.50</p>
+        </li>
+        <li>
+          <div class="tx-detalle">
+            <p class="tx-titulo">Depósito de salario</p>
+            <p class="tx-categoria">Ingresos - Ayer</p>
+          </div>
+          <p class="positivo">+$4,250.00</p>
+        </li>
+        <li>
+          <div class="tx-detalle">
+            <p class="tx-titulo">Electric Utility</p>
+            <p class="tx-categoria">Facturas - 12 may</p>
+          </div>
+          <p class="negativo">-$89.30</p>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
